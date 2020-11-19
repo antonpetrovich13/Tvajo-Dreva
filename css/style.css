@@ -177,14 +177,14 @@ body {
       background-size: cover; }
     @-webkit-keyframes arrow {
       0% {
-        bottom: 15%; }
+        bottom: 17%; }
       100% {
-        bottom: 13%; } }
+        bottom: 15%; } }
     @keyframes arrow {
       0% {
-        bottom: 15%; }
+        bottom: 17%; }
       100% {
-        bottom: 13%; } } }
+        bottom: 15%; } } }
   @media (max-width: 400px) {
     .main__btn {
       width: 140px;
