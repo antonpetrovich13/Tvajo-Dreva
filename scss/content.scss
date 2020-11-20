@@ -1,0 +1,114 @@
+// <MAINSCREEN>
+.mainscreen {
+	position: relative;
+	height: 100vh;
+}
+.main {
+	position: fixed;
+	z-index: 1;
+	min-height: 100vh;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: url("../img/background.png") 0 0 no-repeat;
+	background-size: cover;
+	&__wrapper {
+		position: relative;
+		z-index: 2;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__button {
+		position: relative;
+		overflow: hidden;
+		border-radius: 5px;
+		& span {
+			position: absolute;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			opacity: 0.2;
+			background-color: #fff;
+			transform: translate(0, -100%);
+			transition: all 0.3s ease-out 0s;
+		}
+		&:hover {
+		}
+		&:hover span {
+			transform: translate(0, 0%);
+		}
+	}
+
+	&__btn {
+		position: relative;
+		z-index: 2;
+		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+		text-align: center;
+		display: block;
+		width: 180px;
+		line-height: 55px;
+		border-radius: 5px;
+		border: 1.5px solid #fff;
+		color: #fff;
+		font-size: 18px;
+		font-weight: 300;
+		letter-spacing: 2.5px;
+		transition: all 0.4s ease-out 0s;
+		&:hover {
+			color: #000;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		z-index: 3;
+		left: 50%;
+		transform: translate(-50%, 0);
+		animation-name: arrow;
+		animation-duration: 1s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+	}
+
+	@keyframes arrow {
+		0% {
+			bottom: 7%;
+		}
+		100% {
+			bottom: 5%;
+		}
+	}
+
+	&__link {
+	}
+	@media (max-width: 480px) {
+		background: url("../img/background_mob.png") 0 0 no-repeat;
+		background-size: cover;
+		@keyframes arrow {
+			0% {
+				bottom: 17%;
+			}
+			100% {
+				bottom: 15%;
+			}
+		}
+	}
+	@media (max-width: 400px) {
+		&__btn {
+			width: 140px;
+			line-height: 50px;
+		}
+	}
+}
+
+.nomain {
+	background-color: #fff;
+	position: relative;
+	z-index: 10;
+}
