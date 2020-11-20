@@ -18,10 +18,10 @@ $(document).ready(function () {
 
 
 // ПАРАЛАКС
-/*$(window).scroll(function (event) {
+$(window).scroll(function (event) {
 	var s = 0 - $(this).scrollTop() / 2;
-	$('.mainscreen').css('transform', 'translate3d(0, ' + s + 'px, 0)');
-});*/
+	$('.main__mainscreen').css('transform', 'translate3d(0, ' + s + 'px, 0)');
+});
 
 
 
