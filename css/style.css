@@ -1,7 +1,9 @@
 @charset "UTF-8";
 /*Обнуление*/
-@import url("https://fonts.googleapis.com/css2?family=Pompiere&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pompiere&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -170,7 +172,6 @@ html {
       -ms-transform: scale(1);
       transform: scale(1); }
   .header__phone {
-    font-family: "Just Another Hand", cursive;
     position: relative;
     z-index: 4;
     display: block;
@@ -450,12 +451,12 @@ html {
 .title {
   text-align: center; }
   .title__label {
-    font-family: "Pompiere", cursive;
     color: #a57a50;
     font-size: 30px;
     letter-spacing: 1.3px;
     font-weight: 800;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-family: "Nunito", sans-serif; }
   .title__image {
     display: inline-block;
     margin: 16px 0px 0px 0px;
