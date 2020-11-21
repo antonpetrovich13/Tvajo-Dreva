@@ -155,12 +155,12 @@
 .title {
 	text-align: center;
 	&__label {
-		font-family: "Pompiere", cursive;
 		color: rgba(165, 122, 80, 1);
 		font-size: 30px;
 		letter-spacing: 1.3px;
 		font-weight: 800;
 		text-transform: uppercase;
+		font-family: "Nunito", sans-serif;
 	}
 	&__image {
 		display: inline-block;
