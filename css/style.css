@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Pompiere&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -72,6 +74,9 @@ body {
   .ibg img {
     display: none; }
 
+html {
+  font-family: "Patrick Hand SC", cursive; }
+
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -111,6 +116,7 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between; }
   .header__logo {
+    font-family: "Pompiere", cursive;
     position: relative;
     z-index: 4;
     color: #fff;
@@ -139,6 +145,7 @@ body {
       .header__menu li:last-child {
         margin: 0px 0 0px 30px; }
   .header__link {
+    font-family: "Pompiere", cursive;
     position: relative;
     color: #fff;
     font-size: 20px;
@@ -163,6 +170,7 @@ body {
       -ms-transform: scale(1);
       transform: scale(1); }
   .header__phone {
+    font-family: "Just Another Hand", cursive;
     position: relative;
     z-index: 4;
     display: block;
@@ -442,10 +450,11 @@ body {
 .title {
   text-align: center; }
   .title__label {
+    font-family: "Pompiere", cursive;
     color: #a57a50;
     font-size: 30px;
     letter-spacing: 1.3px;
-    font-weight: 300;
+    font-weight: 800;
     text-transform: uppercase; }
   .title__image {
     display: inline-block;
