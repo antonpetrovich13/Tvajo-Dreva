@@ -1,3 +1,4 @@
+// <MAIN> ===================================================================
 .main {
 	position: relative;
 	min-height: 100vh;
@@ -18,7 +19,7 @@
 		}
 	}
 }
-
+// <MAIN> ===================================================================
 .page {
 	position: absolute;
 	height: 100%;
@@ -27,7 +28,7 @@
 	left: 0;
 	z-index: 2;
 }
-
+// <SCREEN> ===================================================================
 .screen {
 	&__wrapper {
 		height: 100vh;
@@ -116,6 +117,80 @@
 	}
 }
 
-.nomain {
-	background-color: #fff;
+.about {
+	padding: 70px 0px;
+	background-color: #f1f9f9;
+	&__title {
+	}
+	&__text {
+		padding: 0px 15px;
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
+		max-width: 800px;
+		margin: 30px auto 0 auto;
+	}
+	@media (max-width: 970px) {
+		padding: 50px 0px;
+	}
+	@media (max-width: 768px) {
+		&__text {
+			font-size: 18px;
+			max-width: 600px;
+		}
+	}
+	@media (max-width: 480px) {
+		padding: 30px 0px;
+		&__text {
+			margin: 20px auto 0 auto;
+			font-size: 16px;
+			line-height: 26px;
+		}
+	}
+}
+
+.title {
+	text-align: center;
+	&__label {
+		color: rgba(165, 122, 80, 1);
+		font-size: 30px;
+		letter-spacing: 1.3px;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+	&__image {
+		display: inline-block;
+		margin: 16px 0px 0px 0px;
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 90px;
+			height: 1px;
+			top: 50%;
+			right: 45px;
+			background-color: #3d2d29;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			width: 90px;
+			height: 1px;
+			top: 50%;
+			left: 45px;
+			background-color: #3d2d29;
+		}
+	}
+	@media (max-width: 480px) {
+		&__label {
+			font-size: 28px;
+		}
+		&__image {
+			margin: 9px 0px 0px 0px;
+			&:before,
+			&:after {
+				width: 70px;
+			}
+		}
+	}
 }
