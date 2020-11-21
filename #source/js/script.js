@@ -41,3 +41,22 @@ $(function () {
 		$('html, body').animate({ scrollTop: 0 }, 'slow');
 	});
 });
+
+
+// СЛАЙДЕР
+$(window).on('load resize', function () {
+	if ($(window).width() < 600) {
+		$('#slider:not(.slick-initialized)').slick({
+			dots: true,
+			arrows: false,
+			infinite: true,
+			speed: 500,
+			cssEase: 'ease-out',
+			touchThreshold: 10,
+			adaptiveHeight: true,
+			slidesToShow: 1,
+		});
+	} else {
+		$("#slider.slick-initialized").slick("unslick");
+	}
+});
