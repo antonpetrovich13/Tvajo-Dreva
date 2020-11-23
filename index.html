@@ -9,7 +9,7 @@
 	<title>Tvajo Dreva</title>
 </head>
 
-<body>
+<body id="main">
 	<div class="wrapper">
 		<header class="header">
 	<div class="container">
@@ -24,9 +24,9 @@
 			</div>
 			<div class="header__column">
 				<ul class="header__menu">
+					<li><a href="#main" class="header__link">Главная</a></li>
 					<li><a href="#about" class="header__link">О нас</a></li>
 					<li><a href="#products" class="header__link">Товары</a></li>
-					<li><a href="#order" class="header__link">Как заказать</a></li>
 					<li><a href="#contacts" class="header__link">Контакты</a></li>
 				</ul>
 			</div>
@@ -45,8 +45,8 @@
 				<div class="screen">
 					<div class="container">
 						<div class="screen__wrapper">
-							<div class="main__button">
-								<a href="" class="screen__btn">Заказать</a>
+							<div class="screen__button">
+								<a href="#products" class="screen__btn">К товарам</a>
 								<span></span>
 							</div>
 						</div>
@@ -121,7 +121,7 @@
 					<div class="container">
 						<div class="contacts__title title">
 							<div class="title__label">
-								Контакты
+								Наши Контакты
 							</div>
 							<div class="title__image ">
 								<img src="img/leaf_2.png" alt="">
@@ -173,15 +173,31 @@
 						</div>
 					</div>
 				</div>
+				<footer class="footer">
+					<div class="container">
+						<div class="footer__wrapper">
+							<div class="footer__column">
+								<a href="#main" class="footer__logo">TvajoDreva</a>
+							</div>
+							<div class="footer__column">
+								<div class="footer__numbers">
+									<a href="tel:+375333333333" class="footer__link">+375 33 333 33 33</a>
+									<a href="tel:+375293333333" class="footer__link">+375 29 333 33 33</a>
+								</div>
+							</div>
+							<div class="footer__column">
+								<a target="_blank" href="https://www.instagram.com/tvajodreva/" class="footer__social">
+									<img src="img/footer/instagram.png" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="footer__body">
+							© TvajoDreva 2020
+						</div>
+					</div>
+				</footer>
 			</div>
 		</div>
-		<footer class="footer">
-	<div class="container">
-		<div class="footer__wrapper">
-
-		</div>
-	</div>
-</footer>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/main.js"></script>
