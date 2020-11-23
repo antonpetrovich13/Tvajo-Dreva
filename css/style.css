@@ -318,7 +318,10 @@ html {
         padding: 0px 0px 0px 0px;
         background: none;
         font-size: 14px;
-        text-align: center; } }
+        text-align: center; }
+        .header__phone:after {
+          width: 99%;
+          bottom: -3.5px; } }
 
 .main {
   position: relative;
