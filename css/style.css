@@ -82,7 +82,19 @@ html {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto; }
 
 .container {
   max-width: 1230px;
@@ -183,10 +195,19 @@ html {
     -webkit-transition: all 0.4s linear 0s;
     -o-transition: all 0.4s linear 0s;
     transition: all 0.4s linear 0s; }
-    .header__phone:hover {
-      -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      transform: scale(1.1); }
+    .header__phone:after {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 1px;
+      bottom: -1.5px;
+      right: 0;
+      border-bottom: 2px dashed #fff;
+      -webkit-transition: all 0.4s ease 0s;
+      -o-transition: all 0.4s ease 0s;
+      transition: all 0.4s ease 0s; }
+    .header__phone:hover:after {
+      opacity: 0; }
   @media (max-width: 1170px) {
     .header__menu li {
       margin: 0px 15px; }
@@ -348,7 +369,14 @@ html {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #fff; }
+    background-color: #fff;
+    opacity: 0.3;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    -webkit-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    transform: translate(0, -100%); }
   .screen__button:hover span {
     -webkit-transform: translate(0, 0%);
     -ms-transform: translate(0, 0%);
@@ -356,7 +384,7 @@ html {
 
 .screen__btn {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   text-align: center;
   display: block;
@@ -630,6 +658,12 @@ html {
     letter-spacing: 0.4px;
     line-height: 28px;
     font-size: 18px; }
+  .contacts__link {
+    -webkit-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s; }
+    .contacts__link:hover {
+      opacity: 0.5; }
   @media (max-width: 970px) {
     .contacts {
       padding: 50px 0px 30px 0px; } }
@@ -675,7 +709,21 @@ html {
     padding: 0px 0px 15px 0px; }
   .item__number {
     font-size: 20px;
-    color: #000; }
+    color: #000;
+    position: relative; }
+    .item__number:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0px;
+      left: 0;
+      border-bottom: 2px dashed #000;
+      -webkit-transition: all 0.4s ease 0s;
+      -o-transition: all 0.4s ease 0s;
+      transition: all 0.4s ease 0s; }
+    .item__number:hover:after {
+      opacity: 0; }
   @media (max-width: 780px) {
     .item {
       margin: 60px 0px; }
@@ -703,3 +751,67 @@ html {
         padding: 17px 0px 0px 0px; }
       .item__name {
         padding: 0px 0px 6px 0px; } }
+
+.footer {
+  padding: 50px 0px 15px 0;
+  background-color: #2f2823;
+  text-align: center; }
+  .footer__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .footer__column {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 33.333%;
+    flex: 0 1 33.333%; }
+  .footer__logo {
+    font-family: "Pompiere", cursive;
+    position: relative;
+    z-index: 4;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 300; }
+  .footer__link {
+    margin: 8px auto 8px auto;
+    width: 125px;
+    position: relative;
+    display: block;
+    font-size: 18px;
+    color: #fff; }
+    .footer__link:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -2.5px;
+      left: 0;
+      border-bottom: 2px dashed #fff;
+      -webkit-transition: all 0.4s ease 0s;
+      -o-transition: all 0.4s ease 0s;
+      transition: all 0.4s ease 0s; }
+    .footer__link:hover:after {
+      opacity: 0; }
+  .footer__social {
+    -webkit-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s; }
+    .footer__social:hover {
+      opacity: 0.3; }
+  .footer__body {
+    font-size: 16px;
+    margin: 20px 0px 0px 0px; }
+  @media (max-width: 550px) {
+    .footer {
+      padding: 40px 0px 15px 0px; }
+      .footer__wrapper {
+        display: block; }
+      .footer__numbers {
+        margin: 20px 0px; } }
