@@ -808,6 +808,9 @@ html {
   .footer__body {
     font-size: 16px;
     margin: 20px 0px 0px 0px; }
+  @media (max-width: 768px) {
+    .footer__link {
+      margin: 13px auto 13px auto; } }
   @media (max-width: 550px) {
     .footer {
       padding: 40px 0px 15px 0px; }
