@@ -101,6 +101,11 @@ html {
   margin: 0px auto;
   padding: 0px 15px; }
 
+.container-2 {
+  max-width: 650px;
+  margin: 0px auto;
+  padding: 0px 15px; }
+
 .header {
   position: fixed;
   z-index: 20;
@@ -634,7 +639,8 @@ html {
 
 .order {
   padding: 70px 0px;
-  text-align: center; }
+  text-align: center;
+  background-color: #fff; }
   .order__label {
     margin: 25px 0px 0px 0px;
     font-size: 22px;
@@ -716,6 +722,140 @@ html {
       -webkit-box-flex: 0;
       -ms-flex: 0 1 100%;
       flex: 0 1 100%; } }
+
+.delivery {
+  background-color: #aec99c;
+  padding: 70px 0px;
+  background: url("../img/delivery/bg.png") center no-repeat;
+  background-size: cover;
+  height: 620px; }
+  .delivery__tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative; }
+  .delivery__input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .delivery__label {
+    margin: 50px 0 0px 0;
+    text-align: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 50px;
+    background-color: #eee; }
+    .delivery__label_1 {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      -webkit-transition: all 0.4s linear 0s;
+      -o-transition: all 0.4s linear 0s;
+      transition: all 0.4s linear 0s; }
+    .delivery__label_2 {
+      -webkit-transition: all 0.4s linear 0s;
+      -o-transition: all 0.4s linear 0s;
+      transition: all 0.4s linear 0s;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px; }
+  .delivery__body {
+    margin: 20px 0px 0px 0px;
+    width: 100%;
+    display: none; }
+  .delivery__text-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    padding: 50px 0px 0 0; }
+  .delivery__text-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    padding: 50px 0px 0 0; }
+  @media (max-width: 970px) {
+    .delivery {
+      padding: 50px 0;
+      height: 580px; } }
+  @media (max-width: 768px) {
+    .delivery {
+      height: 550px; }
+      .delivery__tab {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+      .delivery__text-1, .delivery__text-2 {
+        padding: 30px 0px 0 0; }
+      .delivery__label {
+        max-width: 215px; } }
+  @media (max-width: 570px) {
+    .delivery {
+      height: 540px; }
+      .delivery__label {
+        font-size: 18px;
+        max-width: 200px; }
+      .delivery__text-1, .delivery__text-2 {
+        padding: 15px 0px 0px 0px; } }
+  @media (max-width: 480px) {
+    .delivery {
+      padding: 30px 0px;
+      height: 520px; }
+      .delivery__label {
+        font-size: 16px;
+        max-width: 170px; } }
+  @media (max-width: 370px) {
+    .delivery__label {
+      margin: 30px 0px 0px 0px;
+      -webkit-box-flex: 0 !important;
+      -ms-flex: 0 1 100% !important;
+      flex: 0 1 100% !important;
+      border-bottom-left-radius: 0px;
+      border-top-right-radius: 10px;
+      line-height: 43px; }
+      .delivery__label_2 {
+        margin: 0px auto;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px; } }
+
+.text {
+  width: 100%; }
+  .text__wrapper {
+    text-align: center; }
+  .text__image {
+    margin: 0px 0px 30px 0px; }
+  .text__info {
+    margin: 15px 0px 0px 0;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.4px;
+    color: #c9c3bb; }
+  @media (max-width: 570px) {
+    .text__info {
+      margin: 10px 0px 0px 0;
+      font-size: 18px; } }
+  @media (max-width: 480px) {
+    .text__info {
+      margin: 15px auto 15px auto;
+      max-width: 300px;
+      line-height: 20px; } }
+
+#tab-1:checked ~ .delivery__label_1 {
+  background-color: #a08e7e;
+  color: #eee; }
+
+#tab-1:checked ~ .delivery__body_1 {
+  display: block; }
+
+#tab-2:checked ~ .delivery__label_2 {
+  background-color: #a08e7e;
+  color: #eee; }
+
+#tab-2:checked ~ .delivery__body_2 {
+  display: block; }
 
 .footer {
   padding: 50px 0px 15px 0;
