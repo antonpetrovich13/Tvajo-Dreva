@@ -674,7 +674,7 @@
 			flex: 0 1 50%;
 		}
 		&__wrapper {
-			margin: 15px 0px 0px 0px;
+			margin: 25px 0px 0px 0px;
 		}
 		&__maps {
 			height: 300px;
@@ -688,10 +688,7 @@
 			font-size: 18px;
 		}
 		&__wrapper {
-			margin: 8px 0px 0px 0px;
-		}
-		&__bottom {
-			margin: 50px 0px 0px 0px;
+			margin: 20px 0px 0px 0px;
 		}
 		&__adress {
 			font-size: 16px;
@@ -702,7 +699,12 @@
 		}
 		&__column {
 			flex: 0 1 100%;
-			justify-content: start;
+			&_1 {
+				order: 2;
+			}
+			&_3 {
+				order: 3;
+			}
 		}
 		&__adress {
 			& p {
@@ -719,13 +721,17 @@
 			line-height: 20px;
 		}
 		&__wrapper {
-			margin: 0px 0px 0px 0px;
+			margin: 8px 0px 0px 0px;
+		}
+		&__link {
+			font-size: 16px;
+			padding: 0px 0px 0px 10px;
 		}
 		&__bottom {
-			margin: 30px 0px 0px 0px;
+			margin: 45px 0px 0px 0px;
 		}
 		&__adresses {
-			margin: 15px 0px 0px 0px;
+			margin: 20px 0px 0px 0px;
 		}
 	}
 }
