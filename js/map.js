@@ -15,7 +15,7 @@ function map(n) {
 	};
 	var markers = new Array();
 	var infowindow = new google.maps.InfoWindow({
-		//pixelOffset: new google.maps.Size(-230,250)
+		pixelOffset: new google.maps.Size(-230, 250)
 	});
 	var locations = [
 		[new google.maps.LatLng(53.1472135, 29.2295536)],
@@ -49,7 +49,7 @@ function map(n) {
 				}
 				var cnt = i + 1;
 				infowindow.setContent($('.contacts-map-item_' + cnt).html());
-				infowindow.open(map, marker);
+				/*infowindow.open(map, marker);*/
 				marker.setIcon(icon);
 				map.setCenterWithOffset(marker.getPosition(), 0, 0);
 				setTimeout(function () {
