@@ -10,6 +10,7 @@
 </head>
 
 <body>
+	<div class="form-wrapper"></div>
 	<header class="header">
 		<div class="container">
 			<div class="header__wrapper">
@@ -38,7 +39,7 @@
 			</div>
 		</div>
 	</header>
-	<div class="form">
+	<div id="main" class="form">
 		<div class="container">
 			<div class="form__wrapper">
 				<form class="form__body" id="form" action="#">
@@ -56,7 +57,7 @@
 						<input class="form__input _req" id="formNick" type="text" name="nick">
 					</div>
 					<div class="form__item">
-						<div class="form__label">Предпочитаемый способ связи</div>
+						<div class="form__label">Предпочитаемый способ связи:</div>
 						<div class="options">
 							<div class="options__item">
 								<input id="formInstagram" checked type="radio" value="instagram" name="communication"
@@ -77,20 +78,19 @@
 					<div class="form__item">
 						<div class="form__label">Выберите товар:</div>
 						<select name="product" class="form__select">
-							<option selected value="Серьги в виде сердца">Серьги в виде сердца</option>
+							<option selected value="Ничего">Ничего</option>
+							<option value="Серьги в виде сердца">Серьги в виде сердца</option>
 							<option value="Серьги из дерева вишни">Серьги из дерева вишни</option>
 							<option value="Серьги из капа берёзы">Серьги из капа берёзы</option>
-							<option value="Серьги с лавандой">Серьги с лавандой</option>
-							<option value="Серьги из изумрудного граба">Серьги из изумрудного граба</option>
-							<option value="Минималистичные серьги">Минималистичные серьги</option>
-							<option value="Серьги с белой смолой">Серьги с белой смолой</option>
-							<option value="Овальные серьги из венге">Овальные серьги из венге</option>
 						</select>
 					</div>
 					<div class="form__item">
 						<label class="form__label" for="formQuantity">Количество*:</label>
-						<textarea class="form__input _req" id="formQuantity" name="quantity" id="" cols="30"
-							rows="10"></textarea>
+						<textarea class="form__input _req" id="formQuantity" name="quantity" rows="10"></textarea>
+					</div>
+					<div class="form__item">
+						<label class="form__label" for="formMessage">Остались вопросы? Задайте их нам:</label>
+						<textarea class="form__input form__input_2" name="message" id="formMessage"></textarea>
 					</div>
 					<button type="submit" class="form__button">
 						<p>
@@ -106,7 +106,7 @@
 		<div class="container">
 			<div class="footer__wrapper">
 				<div class="footer__column">
-					<a href="../index.html" class="footer__logo">TvajoDreva</a>
+					<a href="#main" class="footer__logo">TvajoDreva</a>
 				</div>
 				<div class="footer__column">
 					<div class="footer__numbers">
@@ -125,6 +125,7 @@
 			</div>
 		</div>
 	</footer>
+	</div>
 	<!--@import "js.kit"-->
 	<script src="../js/select.js"></script>
 	<script src="../js/form.js"></script>

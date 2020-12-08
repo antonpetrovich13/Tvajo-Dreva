@@ -206,9 +206,8 @@ html {
     position: relative;
     z-index: 4;
     display: block;
-    padding: 0px 0px 2px 25px;
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     -webkit-transition: all 0.4s linear 0s;
     -o-transition: all 0.4s linear 0s;
@@ -217,14 +216,13 @@ html {
     .header__order:after {
       content: "";
       position: absolute;
-      width: 77%;
-      height: 1px;
-      bottom: -1.5px;
+      width: 100%;
+      bottom: -3px;
       right: 0;
-      border-bottom: 2px dashed #6d3803;
       -webkit-transition: all 0.4s ease 0s;
       -o-transition: all 0.4s ease 0s;
-      transition: all 0.4s ease 0s; }
+      transition: all 0.4s ease 0s;
+      border-bottom: #fff dashed 2px; }
     .header__order:hover:after {
       opacity: 0; }
   @media (max-width: 1170px) {
@@ -1161,6 +1159,11 @@ html {
     max-width: 80px;
     resize: none;
     text-align: center; }
+    .form textarea.form__input_2 {
+      min-width: 100%;
+      min-height: 150px;
+      padding: 20px 20px;
+      text-align: left; }
   .form__input {
     height: 50px;
     padding: 0px 20px;
@@ -1234,6 +1237,13 @@ html {
       line-height: 27px; }
     .form__label {
       font-size: 16px; } }
+  @media (max-width: 483px) {
+    .form {
+      padding: 75px 0px 25px 0px; } }
+  @media (max-width: 420px) {
+    .form__title {
+      font-size: 22px;
+      line-height: 23px; } }
 
 .options__item {
   margin: 0px 0px 10px 0px; }

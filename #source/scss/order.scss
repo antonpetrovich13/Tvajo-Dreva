@@ -1,3 +1,6 @@
+.form-wrapper {
+}
+
 .form {
 	position: relative;
 	z-index: 1;
@@ -37,6 +40,12 @@
 		max-width: 80px;
 		resize: none;
 		text-align: center;
+		&_2 {
+			min-width: 100%;
+			min-height: 150px;
+			padding: 20px 20px;
+			text-align: left;
+		}
 	}
 
 	&__input {
@@ -105,6 +114,15 @@
 		}
 		&__label {
 			font-size: 16px;
+		}
+	}
+	@media (max-width: 483px) {
+		padding: 75px 0px 25px 0px;
+	}
+	@media (max-width: 420px) {
+		&__title {
+			font-size: 22px;
+			line-height: 23px;
 		}
 	}
 }

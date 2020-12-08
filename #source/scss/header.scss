@@ -91,21 +91,19 @@
 		position: relative;
 		z-index: 4;
 		display: block;
-		padding: 0px 0px 2px 25px;
 		color: #fff;
-		font-size: 18px;
+		font-size: 20px;
 		font-weight: 700;
 		transition: all 0.4s linear 0s;
 		letter-spacing: 1.5px;
 		&:after {
 			content: "";
 			position: absolute;
-			width: 77%;
-			height: 1px;
-			bottom: -1.5px;
+			width: 100%;
+			bottom: -3px;
 			right: 0;
-			border-bottom: 2px dashed #6d3803;
 			transition: all 0.4s ease 0s;
+			border-bottom: #fff dashed 2px;
 		}
 		&:hover:after {
 			opacity: 0;
