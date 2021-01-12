@@ -24,6 +24,9 @@
 		display: flex;
 		flex-direction: column;
 		color: #fff;
+		background-color: rgba(255, 255, 255, 0.164);
+		padding: 12px;
+		border-radius: 30px;
 	}
 
 	&__image {
@@ -49,10 +52,10 @@
 		flex: 1 1 auto;
 		margin: 15px 0px;
 		font-size: 18px;
-		background-color: rgba(128, 128, 128, 0.322);
+		background-color: rgba(255, 255, 255, 0.527);
 		border-radius: 30px;
 		& p {
-			color: rgba(218, 211, 211, 0.685);
+			color: rgba(10, 10, 10, 0.685);
 			margin: 7px 0px;
 			line-height: 22px;
 			letter-spacing: 1.2px;
