@@ -1,0 +1,102 @@
+.earrings {
+	padding: 80px 0px 50px 0px;
+	background: url("../img/products/bg.jpg") 0 0 no-repeat;
+	background-size: cover;
+	&__title {
+		padding: 50px 0px 0px 0px;
+	}
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		flex-wrap: wrap;
+		margin: 40px 20px 0px 20px;
+	}
+
+	&__column {
+		margin: 30px 0px 30px 0px;
+		flex: 0 1 25%;
+		padding: 0px 20px;
+		display: flex;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		color: #fff;
+	}
+
+	&__image {
+		& img {
+			border-radius: 50%;
+		}
+	}
+
+	&__label {
+		margin: 10px 0px 0px 0px;
+		font-size: 20px;
+		line-height: 23px;
+		letter-spacing: 1.5px;
+		font-weight: 600;
+		height: 90px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50px;
+	}
+
+	&__option {
+		flex: 1 1 auto;
+		margin: 15px 0px;
+		font-size: 18px;
+		background-color: rgba(128, 128, 128, 0.322);
+		border-radius: 30px;
+		& p {
+			color: rgba(218, 211, 211, 0.685);
+			margin: 7px 0px;
+			line-height: 22px;
+			letter-spacing: 1.2px;
+		}
+	}
+
+	&__cost {
+		margin: 0px auto;
+		font-size: 20px;
+		letter-spacing: 1.5px;
+		& p {
+			border-radius: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 80px;
+			height: 50px;
+			background-color: rgba(0, 0, 0, 0.559);
+		}
+	}
+	@media (max-width: 970px) {
+		&__title {
+			padding: 30px 0px 0px 0px;
+		}
+	}
+	@media (max-width: 768px) {
+		&__wrapper {
+			margin: 20px 20px 0px 20px;
+		}
+	}
+}
+.title {
+	&__label {
+		&_prod {
+			font-size: 42px;
+			letter-spacing: 12.5px;
+		}
+	}
+	@media (max-width: 768px) {
+		&__label {
+			&_prod {
+				font-size: 36px;
+				letter-spacing: 12.5px;
+			}
+		}
+	}
+}

@@ -34,7 +34,8 @@ html {
 	flex-direction: column;
 }
 .content {
-	flex: 1 0 auto;
+	min-height: 100%;
+	flex: 1 1 auto;
 }
 
 .container {
@@ -53,5 +54,6 @@ html {
 @import "content.scss";
 @import "footer.scss";
 @import "order.scss";
+@import "earrings.scss";
 
 // <ОСНОВНОЙ БЛОК> ============================================================================================
