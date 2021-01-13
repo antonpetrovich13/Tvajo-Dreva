@@ -949,7 +949,7 @@ html {
       line-height: 50px; } }
 
 .contacts {
-  background-color: #f1f9f9;
+  background-color: #777a7a69;
   padding: 70px 0px 0 0;
   text-align: center; }
   .contacts__top {
@@ -1297,8 +1297,62 @@ html {
 
 .earrings {
   padding: 80px 0px 50px 0px;
-  background: url("../img/products/bg.jpg") 0 0 no-repeat;
+  background-color: #fff;
   background-size: cover; }
+  .earrings__pageup {
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(165, 123, 80, 0.918);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    -webkit-animation-name: pageup;
+    animation-name: pageup;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate; }
+    .earrings__pageup:hover {
+      -webkit-animation-play-state: paused;
+      animation-play-state: paused; }
+
+@-webkit-keyframes pageup {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-box-shadow: 0;
+    box-shadow: 0; }
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-box-shadow: 0px 0px 2.5px 2.5px rgba(0, 0, 0, 0.388);
+    box-shadow: 0px 0px 2.5px 2.5px rgba(0, 0, 0, 0.388); } }
+
+@keyframes pageup {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-box-shadow: 0;
+    box-shadow: 0; }
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-box-shadow: 0px 0px 2.5px 2.5px rgba(0, 0, 0, 0.388);
+    box-shadow: 0px 0px 2.5px 2.5px rgba(0, 0, 0, 0.388); } }
   .earrings__title {
     padding: 50px 0px 0px 0px; }
   .earrings__wrapper {
@@ -1311,7 +1365,7 @@ html {
     text-align: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin: 40px 20px 0px 20px; }
+    margin: 20px 20px 0px 20px; }
   .earrings__column {
     margin: 30px 0px 30px 0px;
     -webkit-box-flex: 0;
@@ -1322,6 +1376,10 @@ html {
     display: -ms-flexbox;
     display: flex; }
   .earrings__item {
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1330,9 +1388,13 @@ html {
     -ms-flex-direction: column;
     flex-direction: column;
     color: #fff;
-    background-color: rgba(255, 255, 255, 0.164);
+    background-color: rgba(165, 123, 80, 0.918);
     padding: 12px;
     border-radius: 30px; }
+    .earrings__item:hover {
+      -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05); }
   .earrings__image img {
     border-radius: 50%; }
   .earrings__label {
@@ -1358,7 +1420,7 @@ html {
     flex: 1 1 auto;
     margin: 15px 0px;
     font-size: 18px;
-    background-color: rgba(255, 255, 255, 0.527);
+    background-color: #fff;
     border-radius: 30px; }
     .earrings__option p {
       color: rgba(10, 10, 10, 0.685);
@@ -1382,13 +1444,15 @@ html {
       justify-content: center;
       width: 80px;
       height: 50px;
-      background-color: rgba(0, 0, 0, 0.559); }
+      background-color: rgba(0, 0, 0, 0.659); }
   @media (max-width: 970px) {
     .earrings__title {
       padding: 30px 0px 0px 0px; } }
   @media (max-width: 768px) {
+    .earrings__title {
+      padding: 10px 0px 0px 0px; }
     .earrings__wrapper {
-      margin: 20px 20px 0px 20px; } }
+      margin: 10px 20px 0px 20px; } }
   @media (max-width: 550px) {
     .earrings__label {
       margin: 20px 0px 0px 0px;
