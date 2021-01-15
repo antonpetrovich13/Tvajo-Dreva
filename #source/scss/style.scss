@@ -1,0 +1,59 @@
+// <ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ> ============================================================================
+@import "nullstyle.scss";
+body {
+	font-size: 14px;
+	color: #000;
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+.ibg {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	img {
+		display: none;
+	}
+}
+
+// <ПОДКЛЮЧЕНИЕ ШРИФТОВ> ====================================================================================
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pompiere&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
+html {
+	font-family: "Patrick Hand SC", cursive;
+}
+// <ОБОЛОЧКА, КОНТЕЙНЕР> ====================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.content {
+	min-height: 100%;
+	flex: 1 1 auto;
+}
+
+.container {
+	max-width: 1230px;
+	margin: 0px auto;
+	padding: 0px 15px;
+}
+.container-2 {
+	max-width: 650px;
+	margin: 0px auto;
+	padding: 0px 15px;
+}
+
+// <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ> ===============================================================================
+@import "header.scss";
+@import "content.scss";
+@import "footer.scss";
+@import "order.scss";
+@import "earrings.scss";
+
+// <ОСНОВНОЙ БЛОК> ============================================================================================

@@ -1,0 +1,75 @@
+.footer {
+	padding: 50px 0px 15px 0;
+	background-color: #2f2823;
+	text-align: center;
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	&__column {
+		flex: 0 1 33.333%;
+	}
+
+	&__logo {
+		font-family: "Pompiere", cursive;
+		position: relative;
+		z-index: 4;
+		color: #fff;
+		font-size: 36px;
+		font-weight: 300;
+	}
+
+	&__numbers {
+	}
+
+	&__link {
+		margin: 8px auto 8px auto;
+		width: 125px;
+		position: relative;
+		display: block;
+		font-size: 18px;
+		color: #fff;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			bottom: -2.5px;
+			left: 0;
+			border-bottom: 2px dashed #fff;
+			transition: all 0.4s ease 0s;
+		}
+		&:hover:after {
+			opacity: 0;
+		}
+	}
+
+	&__social {
+		transition: all 0.3s linear 0s;
+		&:hover {
+			opacity: 0.3;
+		}
+	}
+
+	&__body {
+		font-size: 16px;
+		margin: 20px 0px 0px 0px;
+	}
+	@media (max-width: 768px) {
+		&__link {
+			margin: 13px auto 13px auto;
+		}
+	}
+	@media (max-width: 550px) {
+		padding: 40px 0px 15px 0px;
+		&__wrapper {
+			display: block;
+		}
+		&__numbers {
+			margin: 20px 0px;
+		}
+	}
+}
