@@ -1,3 +1,4 @@
+"use strict"
 
 // МЕНЮ-БУРГЕР
 $(document).ready(function () {
@@ -60,3 +61,36 @@ $(window).on('load resize', function () {
 		$("#slider.slick-initialized").slick("unslick");
 	}
 });
+
+
+
+//ПЕРЕДАЧА НАЗВАНИЯ В ФОРМУ
+
+//ПЕРЕДАЧА НАЗВАНИЯ В ФОРМУ
+/*$(document).ready(function () {
+	$('.earrings__item').click(function (event) {
+		var local = document.querySelector(".earrings__label").innerText;
+		localStorage.setItem("productLabel", local);
+	})
+})*/
+
+
+
+document.querySelectorAll(".earrings__item").forEach(function (el) {
+	el.addEventListener("click", function (ev) {
+		if (ev.target != el) {
+			var local = el.querySelector(".earrings__label").innerText;
+			localStorage.setItem("productLabel", local);
+		}
+	});
+})
+
+
+if (document.querySelector(".form__input_data")) {
+	document.querySelector(".form__input_data").value = localStorage.getItem("productLabel");
+}
+
+
+
+
+
