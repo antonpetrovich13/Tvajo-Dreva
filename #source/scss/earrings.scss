@@ -38,6 +38,12 @@
 	&__title {
 		padding: 50px 0px 0px 0px;
 	}
+	&__subtitle {
+		letter-spacing: 1.3px;
+		margin: 30px 0px 0 0;
+		font-size: 22px;
+		text-align: center;
+	}
 	&__wrapper {
 		display: flex;
 		justify-content: center;
@@ -68,8 +74,12 @@
 	}
 
 	&__image {
+		width: 200px;
+		min-height: 200px;
+		margin: 0px auto;
 		& img {
 			border-radius: 50%;
+			max-width: 100%;
 		}
 	}
 
@@ -101,7 +111,7 @@
 	}
 
 	&__cost {
-		margin: 0px auto;
+		margin: 15px auto 0px auto;
 		font-size: 20px;
 		letter-spacing: 1.5px;
 		& p {
@@ -127,10 +137,24 @@
 			margin: 10px 20px 0px 20px;
 		}
 	}
+	@media (max-width: 720px) {
+		&__subtitle {
+			margin: 15px 0px 0px 0px;
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
 	@media (max-width: 550px) {
 		&__label {
 			margin: 20px 0px 0px 0px;
 			height: auto;
+		}
+	}
+	@media (max-width: 420px) {
+		&__subtitle {
+			letter-spacing: 1px;
+			font-size: 18px;
+			line-height: 20px;
 		}
 	}
 }

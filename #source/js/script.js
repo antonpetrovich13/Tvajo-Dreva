@@ -65,17 +65,6 @@ $(window).on('load resize', function () {
 
 
 //ПЕРЕДАЧА НАЗВАНИЯ В ФОРМУ
-
-//ПЕРЕДАЧА НАЗВАНИЯ В ФОРМУ
-/*$(document).ready(function () {
-	$('.earrings__item').click(function (event) {
-		var local = document.querySelector(".earrings__label").innerText;
-		localStorage.setItem("productLabel", local);
-	})
-})*/
-
-
-
 document.querySelectorAll(".earrings__item").forEach(function (el) {
 	el.addEventListener("click", function (ev) {
 		if (ev.target != el) {
@@ -85,12 +74,9 @@ document.querySelectorAll(".earrings__item").forEach(function (el) {
 	});
 })
 
-
 if (document.querySelector(".form__input_data")) {
 	document.querySelector(".form__input_data").value = localStorage.getItem("productLabel");
 }
-
-
 
 
 

@@ -1355,6 +1355,11 @@ html {
     box-shadow: 0px 0px 2.5px 2.5px rgba(0, 0, 0, 0.388); } }
   .earrings__title {
     padding: 50px 0px 0px 0px; }
+  .earrings__subtitle {
+    letter-spacing: 1.3px;
+    margin: 30px 0px 0 0;
+    font-size: 22px;
+    text-align: center; }
   .earrings__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1395,8 +1400,13 @@ html {
       -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
       transform: scale(1.05); }
-  .earrings__image img {
-    border-radius: 50%; }
+  .earrings__image {
+    width: 200px;
+    min-height: 200px;
+    margin: 0px auto; }
+    .earrings__image img {
+      border-radius: 50%;
+      max-width: 100%; }
   .earrings__label {
     margin: 10px 0px 0px 0px;
     font-size: 20px;
@@ -1428,7 +1438,7 @@ html {
       line-height: 22px;
       letter-spacing: 1.2px; }
   .earrings__cost {
-    margin: 0px auto;
+    margin: 15px auto 0px auto;
     font-size: 20px;
     letter-spacing: 1.5px; }
     .earrings__cost p {
@@ -1453,10 +1463,20 @@ html {
       padding: 10px 0px 0px 0px; }
     .earrings__wrapper {
       margin: 10px 20px 0px 20px; } }
+  @media (max-width: 720px) {
+    .earrings__subtitle {
+      margin: 15px 0px 0px 0px;
+      font-size: 20px;
+      line-height: 24px; } }
   @media (max-width: 550px) {
     .earrings__label {
       margin: 20px 0px 0px 0px;
       height: auto; } }
+  @media (max-width: 420px) {
+    .earrings__subtitle {
+      letter-spacing: 1px;
+      font-size: 18px;
+      line-height: 20px; } }
 
 .title__label_prod {
   font-size: 42px;
