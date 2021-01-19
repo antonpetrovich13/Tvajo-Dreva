@@ -131,24 +131,9 @@ html {
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
+    align-items: center; }
   .header__column_2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
+    margin: 0px auto; }
   .header__logo {
     font-family: "Pompiere", cursive;
     position: relative;
@@ -228,16 +213,18 @@ html {
       opacity: 0; }
   @media (max-width: 1170px) {
     .header__menu li {
-      margin: 0px 15px; }
+      margin: 0px 12px; }
       .header__menu li:first-child {
-        margin: 0px 15px 0px 0px; }
+        margin: 0px 12px 0px 0px; }
       .header__menu li:last-child {
-        margin: 0px 0 0px 15px; } }
-  @media (max-width: 970px) {
+        margin: 0px 0 0px 12px; } }
+  @media (max-width: 1070px) {
     .header {
       height: 70px; }
       .header__wrapper {
         height: 70px; }
+      .header__logo {
+        text-align: left; }
       .header__burger {
         display: block;
         -webkit-box-ordinal-group: 5;
@@ -315,7 +302,8 @@ html {
           text-align: center;
           margin: 0px 0px 0px 0px !important; }
       .header__menu.active {
-        top: 0; }
+        top: 0;
+        padding: 50px 0px 0px 0px; }
       .header__link {
         font-size: 30px; } }
   @media (max-width: 768px) {
@@ -324,7 +312,9 @@ html {
       .header__wrapper {
         height: 55px; }
       .header__logo {
-        font-size: 28px; } }
+        font-size: 28px; }
+      .header__menu.active {
+        padding: 20px 0px 0px 0px; } }
   @media (max-width: 480px) {
     .header {
       height: 50px; }
@@ -332,14 +322,8 @@ html {
         height: 50px; }
       .header__logo {
         font-size: 22px; }
-      .header__phone {
-        padding: 0px 0px 0px 0px;
-        background: none;
-        font-size: 14px;
-        text-align: center; }
-        .header__phone:after {
-          width: 99%;
-          bottom: -3.5px; } }
+      .header__menu.active {
+        padding: 10px 0px 0px 0px; } }
 
 .main {
   position: relative;
@@ -526,6 +510,10 @@ html {
       top: 50%;
       left: 45px;
       background-color: #3d2d29; }
+    .title__image_w:before {
+      background-color: #fff; }
+    .title__image_w:after {
+      background-color: #fff; }
   @media (max-width: 480px) {
     .title__label {
       font-size: 28px; }
@@ -556,9 +544,7 @@ html {
     flex: 0 1 50%;
     text-align: center; }
   .products__image {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 1 100px;
-    flex: 0 1 100px;
+    width: 250px;
     overflow: hidden; }
     .products__image img {
       -webkit-transition: all 0.5s ease 0s;
@@ -566,7 +552,7 @@ html {
       transition: all 0.5s ease 0s;
       overflow: hidden;
       border-radius: 50%;
-      max-width: 100%; }
+      width: 250px; }
       .products__image img:hover {
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
@@ -678,9 +664,9 @@ html {
     flex: 1 1 auto; }
   .order__text {
     margin: 20px auto 0px auto;
-    width: 150px;
+    width: 250px;
     font-size: 18px;
-    line-height: 20px; }
+    line-height: 22px; }
   .order__link {
     color: #a57a50;
     position: relative; }
@@ -700,6 +686,16 @@ html {
   @media (max-width: 970px) {
     .order {
       padding: 50px 0px; } }
+  @media (max-width: 800px) {
+    .order__column {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+      flex: 0 1 50%; }
+      .order__column_2 {
+        margin: 40px 0 0 0;
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3; } }
   @media (max-width: 768px) {
     .order__label {
       margin: 20px 0px 0px 0px;
@@ -710,18 +706,27 @@ html {
     .order__wrapper {
       margin: 10px 0px 0px 0px; }
     .order__column {
-      margin: 40px 0px 0px 0px;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-      flex: 0 1 50%; } }
+      margin: 40px 0px 0px 0px; } }
   @media (max-width: 520px) {
     .order__label {
       font-size: 18px; }
     .order__column {
       margin: 30px 0px 0px 0px; }
+      .order__column_1 {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2; }
+      .order__column_2 {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1; }
+      .order__column_3 {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3; }
     .order__text {
-      font-size: 16px;
-      line-height: 18px; } }
+      font-size: 18px;
+      line-height: 22px; } }
   @media (max-width: 480px) {
     .order {
       padding: 30px 0px; } }
@@ -949,15 +954,18 @@ html {
       line-height: 50px; } }
 
 .contacts {
-  background-color: #777a7a69;
-  padding: 70px 0px 0 0;
+  background: url("../img/contacts/bg.jpg") 0 -300px no-repeat;
+  background-size: cover;
+  padding: 50px 0px 0 0;
   text-align: center; }
   .contacts__top {
-    margin: 40px 0px 0px 0px; }
+    margin: 20px 0px 0px 0px; }
   .contacts__label {
-    font-size: 20px;
+    color: #fff;
+    font-size: 22px;
     font-weight: 600;
-    letter-spacing: 0.4px; }
+    letter-spacing: 1.2px;
+    line-height: 24px; }
     .contacts__label span {
       margin: 5px 0px 0px 0px;
       display: block; }
@@ -990,16 +998,22 @@ html {
   .contacts__link {
     padding: 0px 0px 0px 20px;
     font-size: 18px;
-    color: #56594a; }
+    color: #fff;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; }
+    .contacts__link:hover {
+      color: #a57a50; }
   .contacts__bottom {
     margin: 70px 0px 0px 0px; }
   .contacts__adresses {
-    color: #56594a;
-    margin: 30px 0px 0px 0px; }
+    color: #fff;
+    margin: 40px 0px 0px 0px; }
   .contacts__adress {
-    font-size: 18px; }
+    font-size: 18px;
+    letter-spacing: 1.2px; }
     .contacts__adress p:last-child {
-      margin: 10px 0px 0px 0px; }
+      margin: 15px 0px 0px 0px; }
   .contacts__maps {
     margin: 20px 0px 0px 0px;
     position: relative;

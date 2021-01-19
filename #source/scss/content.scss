@@ -188,6 +188,14 @@
 			left: 45px;
 			background-color: #3d2d29;
 		}
+		&_w {
+			&:before {
+				background-color: #fff;
+			}
+			&:after {
+				background-color: #fff;
+			}
+		}
 	}
 	@media (max-width: 480px) {
 		&__label {
@@ -225,13 +233,14 @@
 		text-align: center;
 	}
 	&__image {
-		flex: 0 1 100px;
+		width: 250px;
+		//flex: 0 1 100px;
 		overflow: hidden;
 		& img {
 			transition: all 0.5s ease 0s;
 			overflow: hidden;
 			border-radius: 50%;
-			max-width: 100%;
+			width: 250px;
 			&:hover {
 				transform: scale(1.1);
 			}
@@ -342,9 +351,9 @@
 
 	&__text {
 		margin: 20px auto 0px auto;
-		width: 150px;
+		width: 250px;
 		font-size: 18px;
-		line-height: 20px;
+		line-height: 22px;
 	}
 
 	&__link {
@@ -367,6 +376,15 @@
 	@media (max-width: 970px) {
 		padding: 50px 0px;
 	}
+	@media (max-width: 800px) {
+		&__column {
+			flex: 0 1 50%;
+			&_2 {
+				margin: 40px 0 0 0;
+				order: 3;
+			}
+		}
+	}
 	@media (max-width: 768px) {
 		&__label {
 			margin: 20px 0px 0px 0px;
@@ -382,7 +400,6 @@
 		}
 		&__column {
 			margin: 40px 0px 0px 0px;
-			flex: 0 1 50%;
 		}
 	}
 	@media (max-width: 520px) {
@@ -391,10 +408,19 @@
 		}
 		&__column {
 			margin: 30px 0px 0px 0px;
+			&_1 {
+				order: 2;
+			}
+			&_2 {
+				order: 1;
+			}
+			&_3 {
+				order: 3;
+			}
 		}
 		&__text {
-			font-size: 16px;
-			line-height: 18px;
+			font-size: 18px;
+			line-height: 22px;
 		}
 	}
 	@media (max-width: 480px) {
@@ -677,20 +703,23 @@
 // <CONTACTS> ===================================================================
 
 .contacts {
-	background-color: #777a7a69;
-	padding: 70px 0px 0 0;
+	background: url("../img/contacts/bg.jpg") 0 -300px no-repeat;
+	background-size: cover;
+	padding: 50px 0px 0 0;
 	text-align: center;
 	&__title {
 	}
 
 	&__top {
-		margin: 40px 0px 0px 0px;
+		margin: 20px 0px 0px 0px;
 	}
 
 	&__label {
-		font-size: 20px;
+		color: #fff;
+		font-size: 22px;
 		font-weight: 600;
-		letter-spacing: 0.4px;
+		letter-spacing: 1.2px;
+		line-height: 24px;
 		& span {
 			margin: 5px 0px 0px 0px;
 			display: block;
@@ -718,7 +747,11 @@
 	&__link {
 		padding: 0px 0px 0px 20px;
 		font-size: 18px;
-		color: #56594a;
+		color: #fff;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			color: rgba(165, 122, 80, 1);
+		}
 	}
 
 	&__bottom {
@@ -726,15 +759,16 @@
 	}
 
 	&__adresses {
-		color: #56594a;
-		margin: 30px 0px 0px 0px;
+		color: #fff;
+		margin: 40px 0px 0px 0px;
 	}
 
 	&__adress {
 		font-size: 18px;
+		letter-spacing: 1.2px;
 		& p {
 			&:last-child {
-				margin: 10px 0px 0px 0px;
+				margin: 15px 0px 0px 0px;
 			}
 		}
 	}
