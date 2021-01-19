@@ -65,7 +65,7 @@ $(window).on('load resize', function () {
 
 
 //ПЕРЕДАЧА НАЗВАНИЯ В ФОРМУ
-document.querySelectorAll(".earrings__item").forEach(function (el) {
+document.querySelectorAll(".earrings__column").forEach(function (el) {
 	el.addEventListener("click", function (ev) {
 		if (ev.target != el) {
 			var local = el.querySelector(".earrings__label").innerText;

@@ -76,6 +76,9 @@ body {
   .ibg img {
     display: none; }
 
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
 html {
   font-family: "Patrick Hand SC", cursive; }
 
@@ -572,6 +575,11 @@ html {
   @media (max-width: 970px) {
     .products {
       padding: 50px 0px; } }
+  @media (max-width: 768px) {
+    .products__image img:hover {
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none; } }
   @media (max-width: 600px) {
     .products {
       padding: 50px 0px 70px 0px; }
@@ -954,9 +962,9 @@ html {
       line-height: 50px; } }
 
 .contacts {
-  background: url("../img/contacts/bg.jpg") 0 -300px no-repeat;
+  background: url("../img/contacts/bg.jpg") center no-repeat;
   background-size: cover;
-  padding: 50px 0px 0 0;
+  padding: 50px 0px 30px 0;
   text-align: center; }
   .contacts__top {
     margin: 20px 0px 0px 0px; }
@@ -1014,20 +1022,9 @@ html {
     letter-spacing: 1.2px; }
     .contacts__adress p:last-child {
       margin: 15px 0px 0px 0px; }
-  .contacts__maps {
-    margin: 20px 0px 0px 0px;
-    position: relative;
-    height: 400px; }
-  .contacts__map {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 300000; }
   @media (max-width: 970px) {
     .contacts {
-      padding: 50px 0px 0px 0px; } }
+      padding: 50px 0px 20px 0px; } }
   @media (max-width: 700px) {
     .contacts__column {
       margin: 20px 0px 0px 0px;
@@ -1035,9 +1032,7 @@ html {
       -ms-flex: 0 1 50%;
       flex: 0 1 50%; }
     .contacts__wrapper {
-      margin: 25px 0px 0px 0px; }
-    .contacts__maps {
-      height: 300px; } }
+      margin: 25px 0px 0px 0px; } }
   @media (max-width: 610px) {
     .contacts__top {
       margin: 20px 0px 0px 0px; }
@@ -1065,7 +1060,7 @@ html {
       display: block; } }
   @media (max-width: 480px) {
     .contacts {
-      padding: 30px 0px 0px 0px; }
+      padding: 30px 0px 20px 0px; }
       .contacts__label {
         line-height: 20px; }
       .contacts__wrapper {
@@ -1476,7 +1471,11 @@ html {
     .earrings__title {
       padding: 10px 0px 0px 0px; }
     .earrings__wrapper {
-      margin: 10px 20px 0px 20px; } }
+      margin: 10px 20px 0px 20px; }
+    .earrings__item:hover {
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none; } }
   @media (max-width: 720px) {
     .earrings__subtitle {
       margin: 15px 0px 0px 0px;

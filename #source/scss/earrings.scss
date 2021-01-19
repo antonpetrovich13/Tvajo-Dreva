@@ -136,6 +136,11 @@
 		&__wrapper {
 			margin: 10px 20px 0px 20px;
 		}
+		&__item {
+			&:hover {
+				transform: none;
+			}
+		}
 	}
 	@media (max-width: 720px) {
 		&__subtitle {
