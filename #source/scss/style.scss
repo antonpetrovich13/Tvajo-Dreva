@@ -22,12 +22,24 @@ a {
 }
 
 // <ПОДКЛЮЧЕНИЕ ШРИФТОВ> ====================================================================================
-@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,800&display=swap");
+//@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
+//@import url("https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pompiere&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellota+Text:wght@400;700&display=swap");
 html {
-	font-family: "Patrick Hand SC", cursive;
+	//font-family: "Jura", sans-serif;
+	font-family: "Forum", cursive;
+	//font-family: "Cormorant Infant", serif;
+	//font-family: "Fira Code", monospace;
+	//font-family: "Bellota Text", cursive;
+
+	//font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 // <ОБОЛОЧКА, КОНТЕЙНЕР> ====================================================================================
 .wrapper {

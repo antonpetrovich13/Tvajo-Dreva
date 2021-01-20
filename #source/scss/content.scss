@@ -63,7 +63,6 @@
 	&__btn {
 		position: relative;
 		z-index: 4;
-		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 		text-align: center;
 		display: block;
 		width: 180px;
@@ -160,11 +159,12 @@
 	text-align: center;
 	&__label {
 		color: rgba(165, 122, 80, 1);
-		font-size: 30px;
-		letter-spacing: 1.3px;
-		font-weight: 800;
+		font-size: 36px;
+		letter-spacing: 4.5px;
+		font-weight: 700;
 		text-transform: uppercase;
-		font-family: "Nunito", sans-serif;
+
+		//font-family: "Nunito", sans-serif;
 	}
 	&__image {
 		display: inline-block;
@@ -335,7 +335,7 @@
 	background-color: #fff;
 	&__label {
 		margin: 25px 0px 0px 0px;
-		font-size: 22px;
+		font-size: 24px;
 		letter-spacing: 0.4px;
 	}
 
@@ -360,7 +360,7 @@
 	&__text {
 		margin: 20px auto 0px auto;
 		width: 250px;
-		font-size: 18px;
+		font-size: 20px;
 		line-height: 22px;
 	}
 
@@ -456,6 +456,7 @@
 	background: url("../img/delivery/bg.png") center no-repeat;
 	background-size: cover;
 	height: 620px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	&__wrapper {
 	}
 
@@ -630,7 +631,7 @@
 	&__label {
 		margin: 40px 0px 0px 0px;
 		font-size: 20px;
-		font-weight: 600;
+		font-weight: 400;
 		letter-spacing: 0.4px;
 		line-height: 24px;
 		& span {
@@ -722,9 +723,10 @@
 	}
 
 	&__label {
+		//font-family: "Jura", sans-serif;
 		color: #fff;
 		font-size: 22px;
-		font-weight: 600;
+		font-weight: 700;
 		letter-spacing: 1.2px;
 		line-height: 24px;
 		& span {
