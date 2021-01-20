@@ -38,14 +38,14 @@
 	if(trim(!empty($_POST['nick']))){
 		$body.='<p><strong>Никнейм в Instagram:</strong> '.$_POST['nick'].'</p>';
 	}
-	if(trim(!empty($_POST['communication']))){
-		$body.='<p><strong>Предпочитаемый способ связи:</strong> '.$communication.'</p>';
-	}
 	if(trim(!empty($_POST['product']))){
-		$body.='<p><strong>Товар:</strong> '.$_POST['product'].'</p>';
+		$body.='<p><strong>Название продукта:</strong> '.$_POST['product'].'</p>';
 	}
 	if(trim(!empty($_POST['quantity']))){
 		$body.='<p><strong>Количество:</strong> '.$_POST['quantity'].'</p>';
+	}
+	if(trim(!empty($_POST['communication']))){
+		$body.='<p><strong>Предпочитаемый способ связи:</strong> '.$communication.'</p>';
 	}
 	if(trim(!empty($_POST['message']))){
 		$body.='<p><strong>Сообщение:</strong> '.$_POST['message'].'</p>';
