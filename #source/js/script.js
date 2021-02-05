@@ -1,82 +1,96 @@
-"use strict"
 
-// МЕНЮ-БУРГЕР
-$(document).ready(function () {
-	$('.header__burger').click(function (event) {
-		$('.header__burger,.header__menu').
-			toggleClass('active');
-		$('body').toggleClass('lock');
-	});
-});
-
-$(document).ready(function () {
-	$('.header__link').click(function (event) {
-		$('.header__burger, .header__menu').removeClass('active');
-		$('body').removeClass('lock')
-	});
-});
-
-
-
-// ПАРАЛАКС
-$(window).scroll(function (event) {
-	var s = 0 - $(this).scrollTop() / 2;
-	$('.main__mainscreen').css('transform', 'translate3d(0, ' + s + 'px, 0)');
-});
-
-
-
-// ПЛАВНАЯ НАВИГАЦИЯ
-$(function () {
-	$("a[href^='#']").click(function () {
-		var _href = $(this).attr("href");
-		var fixed_offset = 50;
-		$("html, body").animate({ scrollTop: $(_href).offset().top - fixed_offset }, 500);
-		return false;
-	});
-});
-
-
-$(function () {
-	$('.footer__logo').click(function () {
-		$('html, body').animate({ scrollTop: 0 }, 'slow');
-	});
-});
-
-
-// СЛАЙДЕР
+// СЛАЙДЕР (EASY)
 $(window).on('load resize', function () {
-	if ($(window).width() < 600) {
+	if ($(window).width() < 950) {
 		$('#slider:not(.slick-initialized)').slick({
-			dots: true,
-			arrows: false,
+			dots: false,
+			arrows: true,
 			infinite: true,
 			speed: 500,
 			cssEase: 'ease-out',
 			touchThreshold: 10,
 			adaptiveHeight: true,
-			slidesToShow: 1,
+			slidesToShow: 2,
+			responsive: [
+				{
+					breakpoint: 650,
+					settings: {
+						slidesToShow: 1,
+					}
+				}
+			]
 		});
 	} else {
 		$("#slider.slick-initialized").slick("unslick");
 	}
 });
 
-
-
-//ПЕРЕДАЧА НАЗВАНИЯ В ФОРМУ
-document.querySelectorAll(".earrings__column").forEach(function (el) {
-	el.addEventListener("click", function (ev) {
-		if (ev.target != el) {
-			var local = el.querySelector(".earrings__label").innerText;
-			localStorage.setItem("productLabel", local);
-		}
+// СЛАЙДЕР (PRODUCTS)
+$(document).ready(function () {
+	$('.products__slider').slick({
+		arrows: false,
+		dots: false,
+		speed: 300,
+		infinite: true,
+		slidesToShow: 9,
+		centerMode: true,
+		touchThreshold: 40,
+		cssEase: 'ease-out',
+		responsive: [
+			{
+				breakpoint: 1380,
+				settings: {
+					slidesToShow: 8,
+				}
+			}, {
+				breakpoint: 1230,
+				settings: {
+					slidesToShow: 7,
+				}
+			},
+			{
+				breakpoint: 1080,
+				settings: {
+					slidesToShow: 6,
+				}
+			},
+			{
+				breakpoint: 950,
+				settings: {
+					slidesToShow: 5,
+				}
+			},
+			{
+				breakpoint: 810,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 670,
+				settings: {
+					slidesToShow: 3,
+					centerMode: false,
+					dots: true,
+				}
+			},
+			{
+				breakpoint: 530,
+				settings: {
+					slidesToShow: 2,
+					centerMode: false,
+					dots: true,
+				}
+			},
+			{
+				breakpoint: 390,
+				settings: {
+					slidesToShow: 1,
+					centerMode: false,
+					dots: true,
+				}
+			},
+		]
 	});
-})
-
-if (document.querySelector(".form__input_data")) {
-	document.querySelector(".form__input_data").value = localStorage.getItem("productLabel");
-}
-
-
+});
 
