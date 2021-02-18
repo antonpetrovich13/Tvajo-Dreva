@@ -80,36 +80,41 @@
 	}
 
 	&__arrow {
-		position: absolute;
-		z-index: 3;
-		left: 50%;
-		transform: translate(-50%, 0);
-		animation-name: arrow;
-		animation-duration: 1s;
-		animation-timing-function: linear;
-		animation-iteration-count: infinite;
-		animation-direction: alternate;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: translate(0, -150%);
 	}
 
 	@keyframes arrow {
 		0% {
-			bottom: 7%;
+			transform: translate(0, -45%);
 		}
 		100% {
-			bottom: 5%;
+			transform: translate(0, 45%);
 		}
 	}
 
 	&__link {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 60px;
+		text-align: center;
+		& img {
+			animation-name: arrow;
+			animation-duration: 0.8s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
 	}
 	@media (max-width: 480px) {
-		@keyframes arrow {
-			0% {
-				bottom: 13%;
-			}
-			100% {
-				bottom: 11%;
-			}
+		&__arrow {
+			transform: translate(0, -250%);
 		}
 	}
 	@media (max-width: 400px) {

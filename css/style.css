@@ -408,46 +408,67 @@ html {
     color: #000; }
 
 .screen__arrow {
-  position: absolute;
-  z-index: 3;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-  -webkit-animation-name: arrow;
-  animation-name: arrow;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate; }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transform: translate(0, -150%);
+  -ms-transform: translate(0, -150%);
+  transform: translate(0, -150%); }
 
 @-webkit-keyframes arrow {
   0% {
-    bottom: 7%; }
+    -webkit-transform: translate(0, -45%);
+    transform: translate(0, -45%); }
   100% {
-    bottom: 5%; } }
+    -webkit-transform: translate(0, 45%);
+    transform: translate(0, 45%); } }
 
 @keyframes arrow {
   0% {
-    bottom: 7%; }
+    -webkit-transform: translate(0, -45%);
+    transform: translate(0, -45%); }
   100% {
-    bottom: 5%; } }
+    -webkit-transform: translate(0, 45%);
+    transform: translate(0, 45%); } }
+
+.screen__link {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 40px;
+  height: 60px;
+  text-align: center; }
+  .screen__link img {
+    -webkit-animation-name: arrow;
+    animation-name: arrow;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate; }
 
 @media (max-width: 480px) {
-  @-webkit-keyframes arrow {
-    0% {
-      bottom: 13%; }
-    100% {
-      bottom: 11%; } }
-  @keyframes arrow {
-    0% {
-      bottom: 13%; }
-    100% {
-      bottom: 11%; } } }
+  .screen__arrow {
+    -webkit-transform: translate(0, -250%);
+    -ms-transform: translate(0, -250%);
+    transform: translate(0, -250%); } }
 
 @media (max-width: 400px) {
   .screen__btn {
